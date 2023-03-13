@@ -78,3 +78,14 @@ This is a course works of git course offered by special instructor (MOSH).
         EQUALS WITH
       git commit -am   "Fix the bug the prevented the user from signin in"
 
+- Getting files in staging area:
+    * git ls-files
+
+- Getting files in staging area:
+    * git ls-files
+
+- Instead of deleting file with terminal or system command we can use the git delete file command which delete the file from our directory and from the staging area:
+    * git rm <filename>
+    * '' > file1.txt : creating a new empty file
+    * mv file1.txt main.js in unix : moving file from <filesoruce> <filedestination>
+    * git mv <file-soruce> <file-destination> : does the action on the git history and the directory on our system
