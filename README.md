@@ -93,4 +93,19 @@ This is a course works of git course offered by special instructor (MOSH).
 - Ignoring some files with gitignore: 
     * mkdir logs && echo hello > logs/dev.log
     * echo logs/ > .gitignore 
-    * code .gitignore
+    * code .gitignore 
+    * As patterns we can add: the following 
+        `logs/` : ignores a folder within the project root.
+        `*.log` : ignores all files that has an extension of log.
+
+- Removing a file from the staging/index area:
+    * First of all, checking the files that are in the staging area by running:
+        `git ls-files`
+    * Secondly, we use a method that we already talked about it `git rm` 
+      but using this method directly removing the the target from the system too, so
+      we can get a help with the command `git rm` as following:
+        `git rm -h`
+    * Now, we see the options, we can call the function to remove one file as following:
+        `git rm --cached <filesname.extension>`
+    * If we are removing a directory we should apply it recursily 
+        `git rm --cached -r <foldername>`
