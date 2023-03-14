@@ -155,9 +155,14 @@ This is a course works of git course offered by special instructor (MOSH).
     and it will be deleted from the staging area and it will have the initaile state which is untracked file.
 
 
-- Discarding Local Changes: This is a dangerous action
+- Discarding Local Changes before staging: This is a dangerous action
     * `git clean -h` : For help.
     * `git clean -f` : For cleaning forcly.
     * `git clean -d` : For cleaning directories.
     * `git clean -fd`: For cleaning directories forcly.
+
+- Restoring a File to an Earlier Version:
+    * git rm file2.js
+    * git restore
+
 
