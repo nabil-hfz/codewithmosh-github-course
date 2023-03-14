@@ -149,7 +149,7 @@ This is a course works of git course offered by special instructor (MOSH).
         + Git object are {Commits, Blobs(Files), Trees(Directories), Tags}
 
 
-- Unstaging Files:
+- Unstaging files (undoing git add)
     * `git restore --staged <file1.txt file2.txt . *.txt>`
     * How does the `git restore --staged` it takes a copy of the next env/last commit/last snapshot, if the file does exist in that env if not,it means that the file is added 
     and it will be deleted from the staging area and it will have the initaile state which is untracked file.
@@ -159,10 +159,11 @@ This is a course works of git course offered by special instructor (MOSH).
     * `git clean -h` : For help.
     * `git clean -f` : For cleaning forcly.
     * `git clean -d` : For cleaning directories.
-    * `git clean -fd`: For cleaning directories forcly.
+    * `git clean -fd`: Removes all untracked files.
 
 - Restoring a File to an Earlier Version:
     * git rm file2.js
-    * git restore
-
-
+    * git restore file.js                 # Copies file.js from index to working directory  
+    * git restore file1.js file2.js       # Restores multiple files in working directory 
+    * git restore .                       # Discards all local changes (except untracked files)
+    * git restore --source=HEAD~2 file.js # Restoring an earlier version of a file.
