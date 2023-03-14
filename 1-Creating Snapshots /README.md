@@ -1,5 +1,4 @@
 # codewithmosh.com-github-course
-This is a course works of git course offered by special instructor (MOSH).
 
 - Three levels of configurations:
     1- System: All users.
@@ -8,7 +7,7 @@ This is a course works of git course offered by special instructor (MOSH).
 
 - Define a new config:
     * git config --global user.name "Nabil Alhafez"
-    * git config --global user.email nabil.alhfz98@gmail.com
+    * git config --global user.email name@example.com
     * git config --global core.editor "code --wait" 
       wait flag: is to tell the terminal to wait until we    
       close new vs code window
