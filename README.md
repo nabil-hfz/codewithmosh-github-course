@@ -89,3 +89,8 @@ This is a course works of git course offered by special instructor (MOSH).
     * '' > file1.txt : creating a new empty file
     * mv file1.txt main.js in unix : moving file from <filesoruce> <filedestination>
     * git mv <file-soruce> <file-destination> : does the action on the git history and the directory on our system
+
+- Ignoring some files with gitignore 
+    * mkdir logs && echo hello > logs/dev.log
+    * echo logs/ > .gitignore 
+    * code .gitignore
