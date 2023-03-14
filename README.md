@@ -109,3 +109,55 @@ This is a course works of git course offered by special instructor (MOSH).
         `git rm --cached <filesname.extension>`
     * If we are removing a directory we should apply it recursily 
         `git rm --cached -r <foldername>`
+
+
+- Short status, to get a short summriazable status about the project we can run the following:
+    `git status -s`
+    * After running we should get something like: (MM, A, M OR ??): Which the first column represnts the staging area and the second column represents the working directory. Also the ?? represents the added files.
+    We also have colors (Red & Green):  Red for modified unstaged files and green for staged files.
+
+
+- Viewing Staged and Unstaged Changes:
+    * `git diff --staged` : for viewing staged changes.
+    * `git diff`          : for viewing unstaged changes from the working directory.
+
+
+- Visual Diff Tools using VS-Code 
+    * `git config --global diff.tool vscode`: global means apply for all of our repositories. with this command we are give a name (vscode) to our default diff tool
+    * `git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"` :
+        + --wait         : it tells the window to wait until we finish using the vscode.
+        + --diff it      : tells the vscode that it's used for compairing for diffing.
+        + $LOCAL, $REMOTE: These are placeholders for the old and new copy of the files.
+    
+    * Now, we should verify the settings that have been saved correclty.
+    * `git config --global -e` : With this command we are able to edit the config of our global default editor which is vs-code in this case.
+    * Now, we can use the default editor to view the differences, but we will do it through out the diff tool no the diff command but it applies the same logic and argument:
+    * `git difftool --staged` : for viewing staged changes.
+    * `git difftool`          : for viewing unstaged changes from the working directory.
+
+- Viewing History:
+    * `git log`                     : Getting comprehensive info about our history.
+    * `git log --oneline`           : Getting summery info about our history.
+    * `git log --oneline --reverse` : Getting summery reversed info about our history.
+
+- Viewing a Commit:
+    * `git show <commit-id>`
+    * `git show HEAD`
+    * `git show HEAD~1`                                                     : the number after the ~ is the offset from the head.
+    * `git show HEAD~1:<full-path-of-the-file[for example: lib/main.dart]>` : to see the exact stored file in that commit.
+    * `git ls-tree <commit-id OR HEAD>`                                     : to see the entier snapshot of the files which has the following: {Git Object, Git content ID, File name}
+        + Git object are {Commits, Blobs(Files), Trees(Directories), Tags}
+
+
+- Unstaging Files:
+    * `git restore --staged <file1.txt file2.txt . *.txt>`
+    * How does the `git restore --staged` it takes a copy of the next env/last commit/last snapshot, if the file does exist in that env if not,it means that the file is added 
+    and it will be deleted from the staging area and it will have the initaile state which is untracked file.
+
+
+- Discarding Local Changes: This is a dangerous action
+    * `git clean -h` : For help.
+    * `git clean -f` : For cleaning forcly.
+    * `git clean -d` : For cleaning directories.
+    * `git clean -fd`: For cleaning directories forcly.
+
